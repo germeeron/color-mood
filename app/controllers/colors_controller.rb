@@ -21,10 +21,6 @@ class ColorsController < ApplicationController
         end
     end
 
-    def get_color_name
-        @color_name = Color.new(color_params).name
-    end
-
     # GET /colors/:id
     def show
         @color = Color.find(params[:id])
