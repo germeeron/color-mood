@@ -1,3 +1,36 @@
 // Place all the styles related to the colors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+    align-items:        center;
+    font-family:        Arial;
+    margin-top:         80px;   
+    margin-left:        50px;
+    font-size:          25px;      
+}
+
+h1 {
+    text-align:         center;
+    font-size:          50px;
+}
+
+.colorMood {
+    width:              500px;
+    padding-top:        20px;
+    padding-bottom:     20px;
+    text-align:         left;
+    margin:             auto;
+    font-size:          25px;
+}
+
+.button {
+    background:         #add8e6;
+    border-radius:      20px;
+    color:              white;
+    text-align:         center;
+    display:            inline-block;
+    padding:            5px 20px;
+    margin:             0px 8px;
+}
+

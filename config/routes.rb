@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root "colors#index"
 
   resources :colors
+  
   #get "/colors", to: "colors#index", as: "colors"
 
   #get "/colors/new", to: "colors#new", as: "new_color"
