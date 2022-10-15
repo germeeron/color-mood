@@ -30,6 +30,10 @@
             text-align:         left;
             margin:             auto;
             font-size:          25px;
+            background:         #add8e6;
+            border-radius:      20px;
+            color:              white;
+            padding:            5px 20px;
         }
 
     </style>
@@ -40,30 +44,33 @@
 <div class="colorMood">
 <%= form_with model: color do |f| %>
 
-    <p>
-        <% if color.errors.any? %>
-            <ul>
-                <% color.errors.full_messages.each do |message| %>
-                    <li><%= message =%></li>
-                <% end %>
-            </ul>
-        <% end %>
-    </p>
+    <div class="formContainer">
 
-    <p>
-        <%= f.label :user %>
-        <%= f.text_field :user %>
-    </p>
-    <p>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
-    </p>
-    <p>
-        <%= f.label :mood %>
-        <%= f.text_field :mood %>
-    </p>
-    <div class="button">
-        <%= f.submit %>
+        <p>
+            <% if color.errors.any? %>
+                <ul>
+                    <% color.errors.full_messages.each do |message| %>
+                        <li><%= message =%></li>
+                    <% end %>
+                </ul>
+            <% end %>
+        </p>
+
+        <p>
+            <%= f.label :user %>
+            <%= f.text_field :user %>
+        </p>
+        <p>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+        </p>
+        <p>
+            <%= f.label :mood %>
+            <%= f.text_field :mood %>
+        </p>
+        <div class="button">
+            <%= f.submit %>
+        </div>
     </div>
 <% end %>
 </div>
