@@ -1,0 +1,64 @@
+
+<%= render "nav" %>
+
+<head>
+    <style>
+
+        body {
+            alignment:          center;
+            font-family:        Arial;
+            margin-top:         80px;
+        }
+
+        h1 {
+            text-align:         center;
+            font-size:          50px;
+        }
+
+        .colorMood {
+            width:              500px;
+            padding-top:        20px;
+            padding-bottom:     20px;
+            text-align:         left;
+            margin:             auto;
+            font-size:          25px;
+        }
+
+        .button {
+            background:         #add8e6;
+            border-radius:      20px;
+            color:              white;
+            text-align:         center;
+            display:            inline-block;
+            padding:            5px 20px;
+            margin:             0px 8px;
+        }
+
+
+    </style>
+</head>
+
+<h1>color moods</h1>
+
+<body>
+        <% @colors.each do |color| %>
+            <div class="colorMood">
+                <div>
+                    <p>my name is <%= color.user %></p>
+                    <p>current mood: <%= color.name %> for <%= color.mood %></p>
+                </div>
+                <div class="allButtons">
+                    <div class="button">
+                        <%= link_to "view", color %>
+                    </div> 
+                    <div class="button">
+                        <%= link_to "edit", edit_color_path(color) %>
+                    </div>
+                    <div class="button">
+                        <%= link_to "delete", color_path(color), method: :delete,
+                            data: { confirm: "are you sure?" } %>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+</body>

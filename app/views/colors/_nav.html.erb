@@ -1,0 +1,73 @@
+<head>
+    <style>
+        .websiteName {
+            
+        }
+
+        .navLinks a {
+            color: #ffffff;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+
+        .navBar
+            {
+                display:            flex;
+                background:         #06038D;
+                height:             50px;
+                position:           fixed;
+                top:                0;
+                left:               0;
+                right:              0;
+            }
+
+        .websiteName
+            {
+                background: -webkit-linear-gradient(45deg, #FF69B4, #FF69B4, #FFFFFF, #6495ED);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-family:        Arial;
+                font-size:          30px;
+                font-weight:        bold;
+                padding-left:       100px;
+                display:            flex;
+                align-items:        center;
+            }
+
+        .navLinks
+            {
+                font-family:        Arial;
+                font-size:          30px;
+                font-weight:        bold;
+                text-align:         right;
+                display:            flex;
+                align-items:        center;
+                padding-left:       400px;
+
+            }
+
+        .navLinkName
+            {
+                padding-left:       20px;
+            }
+
+    </style>
+</head>
+
+<div class="navBar">
+    <div class="websiteName"><%= link_to "rainbow", colors_path %></div>
+    <div class="navLinks">
+        <div class="navLinkName">
+            <%= link_to "color moods", colors_path %>
+        </div>
+        <div class="navLinkName">
+            <%= link_to "color my day", new_color_path %>
+        </div>
+    </div>  
+</div>
